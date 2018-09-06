@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>随机英雄</title>
+<link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8"/>
+<script src="js/jquery.js"></script>
+</head>
+<body>
+<header id="header">
+  <div class="nvtt"></div>
+</header>
+<div align="center">
+  <canvas id="myCanvas" style="=background: green;"></canvas>
+</div>
+<div id="mainbox">
+  <table width="50%" border="0">
+    <tbody>
+      <tr>
+        <td class="hero_empty" id="1"><img src="img/fox.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="2"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="3"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="4"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="5"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+      </tr>
+      <tr>
+        <td class="hero_empty" id="6"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="7"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="8"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="9"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="10"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+      </tr>
+      <tr>
+        <td class="hero_empty" id="11"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="12"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="13"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="14"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="15"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+      </tr>
+      <tr>
+        <td class="hero_empty" id="16"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="17"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="18"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="19"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="20"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+      </tr>
+      <tr>
+        <td class="hero_empty" id="21"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="22"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="23"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="24"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+        <td class="hero_empty" id="25"><img src="img/empty.png"><br>
+          <a class="attact"></a> <a class="defense"></a><br>
+          <a class="life"></a> <a class="five"></a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div id="box">
+  <input type="image" src="img/qiandao.png" onclick="Sign(this);" width="5%"/>
+  <img src="img/zhaohuan.png" onclick="Init_Hero();" width="5%"/> <img src="img/gongji.png" onclick="Attact()" width="5%"/> <img src="img/hecheng.png" onclick="Mix()" width="5%"/> </div>
+</body>
+<script type="text/javascript"> 
+		var MAXPOINT=60;//最大属性点
+		var MIDPOINT=50;//最大属性点
+		var owner=1
+		var hero_num=0; //英雄序号
+		var eth_balance=1; //eth余额
+		var token_blance=100;//Token余额
+		var fives=["金","木","水","火","土","神"];
+		var heros=new Array();
+		var times=0;
+		var stage;
+		var canvas =document.getElementById("myCanvas"); //画布画状态
+		canvas.width=screen.width*0.9;
+		canvas.height=screen.height*0.06;
+		var brush=canvas.getContext("2d");
+		//移除
+		Array.prototype.removes=function(obj){
+			var index =this.indexOf(obj);
+			if(index>-1){
+				this.splice(index,1);
+			}
+		}
+	
+		function Stage(){
+			this.data=new Array();
+		}
+		Stage.prototype.add=function(obj){
+			this.data.push(obj);
+		}
+		Stage.prototype.remove=function(obj){
+			this.data.removes(obj);
+		}
+		Stage.prototype.draw = function(g){
+		var list = this.data;
+			
+		function loop(){
+			brush.clearRect(0,0,canvas.width,canvas.height);
+			brush.fillStyle="#4775806b"
+			brush.fillRect(0,0,canvas.width,canvas.height);
+			paintInfo(g);
+			list.forEach(function(o){
+				o.paint(g);
+			})
+			requestAnimationFrame(loop);
+		}
+		loop();
+		}
+		
+		function paintInfo(g){
+			g.beginPath();
+			g.font="1rem 宋体";
+			g.fillStyle="white";
+			var tx=screen.width*0.04;
+			var ty=screen.height*0.03;
+			var tt=screen.width/10;
+			g.fillText("玩家:Ydapp",tx,ty);
+			g.fillText("Eth余额:"+eth_balance.toFixed(3),tx+=tt,ty);
+			g.fillText("Token余额:"+token_blance,tx+=tt,ty);
+			g.fillText("英雄数量:"+hero_num,tx+=tt,ty);
+			g.fillText("签到次数:"+times,tx+=tt,ty)
+			g.stroke();
+		}
+		
+		
+		//英雄类
+		function Hero(index,owner){
+			this.index=index;
+			this.name=index;
+			this.attack=0;
+			this.defense=0;
+			this.life=0;
+			this.five=0;
+			this.residue=5;
+			this.owner=owner;
+			this.src="img/fox.png";
+			this.list=[];
+			return this;
+		}
+		//召唤英雄
+		function Init_Hero(){
+			if(eth_balance<=0){
+				alert("Eth余额不足，刷新重新开始游戏!")
+				return 0;
+			}
+			var hero=new Hero(hero_num++,owner);
+			hero.attack=Math.ceil(Math.random()*25);
+			hero.defense=Math.ceil(Math.random()*25);
+			hero.life=(MIDPOINT-hero.attack-hero.defense);
+			hero.five=(Math.ceil(Math.random()*100))%5;
+			eth_balance-=0.05;
+			heros.push(hero);
+			alert("获得英雄:"+hero_num+"攻击力:"+hero.attack+"防御力:"+hero.defense+"血量:"+hero.life+"五行:"+fives[hero.five]);
+			$("#"+hero_num).removeClass("hero_empty").addClass("hero");
+			$("#"+hero_num).children("a.attact").text("攻击:"+hero.attack);
+			$("#"+hero_num).children("img").attr({src:"img/fox.png"});
+			$("#"+hero_num).children("a.defense").text("防御:"+hero.defense);
+			$("#"+hero_num).children("a.life").text("血量:"+hero.life);
+			$("#"+hero_num).children("a.five").text("五行:"+fives[hero.five]);
+			
+			return hero;
+		}
+		
+		//签到方法
+		function Sign(me){
+			if(times>=100){
+				alert("签到超过100次，休息一下吧！")
+				return 0;
+			}
+			 me.disabled = true;
+			 window.setTimeout(function(){
+                    me.disabled = false;
+                },5000);
+			 token_blance+=10;
+			 alert("签到成功，增加10Tkoen，5秒后可再次领取。")
+		}
+		
+		
+		//选中
+	$(function(){
+		$(".hero_empty").click(function(){
+			$(this).toggleClass("hero_click");
+		})
+	})
+	
+
+	
+	//攻击方法
+	function Attact(){
+		if($("tr").find("td.hero_click").length!=2){
+			alert("请选择2个英雄！");
+			return 0;
+		}
+		else{
+		var A=heros[$("tr").find("td.hero_click")[0].id-1];
+		var B=heros[$("tr").find("td.hero_click")[1].id-1];
+		var a_times=Math.ceil((A.attack-B.defense)/B.life);
+		var b_times=Math.ceil((B.attack-A.defense)/A.life);
+		if(a_times<=0&&b_times>0){
+			alert("A无法打破B的防御，战斗失败!获得了50Token"+a_times+b_times);
+			token_blance+=50;
+			return 0;
+		}else if(a_times<=0&&b_times<=0){
+			alert("平局!"+a_times+b_times);
+			return 0;
+		}
+			
+		if(a_times>b_times){
+			alert("A获胜！获得了0.1eth");
+			eth_balance+=0.1;
+			return 0;
+		}else if(a_times=b_times&&Math.random()>0.5){
+			alert("A获胜！获得了0.1eth");
+			eth_balance+=0.1;
+			return 0;
+		}else{
+			alert("A战斗失败!获得了50Token"+a_times+b_times);
+			token_blance+=50;
+			return 0;
+		}
+
+		}	
+			
+		};
+	//合成方法
+		function Mix(){
+			if($("tr").find("td.hero_click").length!=5){
+			alert("请选择5个英雄！");
+			return 0;
+			}
+			var hero1=heros[$("tr").find("td.hero_click")[0].id-1];
+			var hero2=heros[$("tr").find("td.hero_click")[1].id-1];
+			var hero3=heros[$("tr").find("td.hero_click")[2].id-1];
+			var hero4=heros[$("tr").find("td.hero_click")[3].id-1];
+			var hero5=heros[$("tr").find("td.hero_click")[4].id-1];
+			
+			if(hero1.five+hero2.five+hero3.five+hero4.five+hero5.five!=10&&hero1.five*hero2.five*hero3.five*hero4.five*hero5.five!=0){
+				alert("请选择属性分别为金木水火土！");
+				return 0;
+			}else if(token_blance<=100){
+					alert("Token不够100！");
+			}else{
+				var hero=new Hero(hero_num++,owner);
+				hero.attack=Math.max(hero1.attack,hero2.attack,hero3.attack,hero4.attack,hero5.attack);
+				hero.defense=Math.max(hero1.defense,hero2.defense,hero3.defense,hero4.defense,hero5.defense);
+				hero.life=Math.max(hero1.life,hero2.life,hero3.life,hero4.life,hero5.life);
+				hero.five=5;
+				heros.push(hero);
+				alert("获得英雄:"+hero_num+"攻击力:"+hero.attack+"防御力:"+hero.defense+"血量:"+hero.life+"五行:"+fives[hero.five]);
+				$("#"+hero_num).removeClass("hero_empty").addClass("hero");
+				$("#"+hero_num).children("a.attact").text("攻击:"+hero.attack);
+				$("#"+hero_num).children("img").attr({src:"img/fox.png"});
+				$("#"+hero_num).children("a.defense").text("防御:"+hero.defense);
+				$("#"+hero_num).children("a.life").text("血量:"+hero.life);
+				$("#"+hero_num).children("a.five").text("五行:"+fives[hero.five]);
+				token_blance-=100;
+			return hero;
+			}
+			
+		}
+
+	
+	
+		window.onload=function(){
+			stage=new Stage();
+			stage.draw(brush);	
+		}
+		
+
+		
+		</script>
+</html>
